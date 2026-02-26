@@ -8,3 +8,6 @@ export * from './GameStateMachine';
 export * from './DialogSystem';
 export * from './CharacterSystem';
 export * from './SaveLoadSystem';
+export * from './StoryManager';
+export * from './AudioManager';
+export * from './FlagManager';
