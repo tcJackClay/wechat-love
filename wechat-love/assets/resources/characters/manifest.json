@@ -1,0 +1,53 @@
+{
+    "version": "1.0",
+    "description": "角色立绘资源清单",
+    "characters": [
+        {
+            "id": "heroine_1",
+            "name": "林雨晴",
+            "sprites": [
+                { "id": "normal", "file": "normal.png", "description": "普通" },
+                { "id": "smile", "file": "smile.png", "description": "微笑" },
+                { "id": "blush", "file": "blush.png", "description": "脸红" },
+                { "id": "angry", "file": "angry.png", "description": "生气" },
+                { "id": "sad", "file": "sad.png", "description": "伤心" },
+                { "id": "surprise", "file": "surprise.png", "description": "惊讶" },
+                { "id": "think", "file": "think.png", "description": "思考" },
+                { "id": "laugh", "file": "laugh.png", "description": "大笑" }
+            ]
+        },
+        {
+            "id": "heroine_2",
+            "name": "苏小晚",
+            "sprites": [
+                { "id": "normal", "file": "normal.png", "description": "普通" },
+                { "id": "smile", "file": "smile.png", "description": "微笑" },
+                { "id": "blush", "file": "blush.png", "description": "脸红" },
+                { "id": "angry", "file": "angry.png", "description": "生气" },
+                { "id": "sad", "file": "sad.png", "description": "伤心" },
+                { "id": "surprise", "file": "surprise.png", "description": "惊讶" },
+                { "id": "think", "file": "think.png", "description": "思考" },
+                { "id": "laugh", "file": "laugh.png", "description": "大笑" }
+            ]
+        },
+        {
+            "id": "heroine_3",
+            "name": "沈墨寒",
+            "sprites": [
+                { "id": "normal", "file": "normal.png", "description": "普通" },
+                { "id": "smile", "file": "smile.png", "description": "微笑" },
+                { "id": "blush", "file": "blush.png", "description": "脸红" },
+                { "id": "angry", "file": "angry.png", "description": "生气" },
+                { "id": "sad", "file": "sad.png", "description": "伤心" },
+                { "id": "surprise", "file": "surprise.png", "description": "惊讶" },
+                { "id": "think", "file": "think.png", "description": "思考" },
+                { "id": "laugh", "file": "laugh.png", "description": "大笑" }
+            ]
+        }
+    ],
+    "spec": {
+        "format": "PNG (透明背景)",
+        "size": "600x900 px",
+        "style": "简约二次元"
+    }
+}

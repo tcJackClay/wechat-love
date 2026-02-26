@@ -1,0 +1,28 @@
+{
+    "version": "1.0",
+    "description": "音频资源清单",
+    "bgm": [
+        { "id": "bgm_title", "file": "title.mp3", "description": "标题画面" },
+        { "id": "bgm_chapter_0", "file": "chapter_0.mp3", "description": "序章" },
+        { "id": "bgm_chapter_1", "file": "chapter_1.mp3", "description": "第一章" },
+        { "id": "bgm_chapter_2", "file": "chapter_2.mp3", "description": "第二章" },
+        { "id": "bgm_date", "file": "date.mp3", "description": "约会场景" },
+        { "id": "bgm_ending", "file": "ending.mp3", "description": "结局" }
+    ],
+    "sfx": [
+        { "id": "sfx_dialog_next", "file": "dialog_next.mp3", "description": "对话快进" },
+        { "id": "sfx_choice_select", "file": "choice_select.mp3", "description": "选项选择" },
+        { "id": "sfx_favor_up", "file": "favor_up.mp3", "description": "好感度提升" },
+        { "id": "sfx_unlock", "file": "unlock.mp3", "description": "解锁" },
+        { "id": "sfx_button", "file": "button.mp3", "description": "按钮点击" }
+    ],
+    "spec": {
+        "bgm_format": "MP3/OGG, 128kbps, 循环",
+        "sfx_format": "MP3/WAV, 44.1kHz",
+        "sources": [
+            "https://dova-s.jp/",
+            "https://maou.audio/",
+            "https://freesound.org/"
+        ]
+    }
+}

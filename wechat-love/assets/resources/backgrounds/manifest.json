@@ -1,0 +1,19 @@
+{
+    "version": "1.0",
+    "description": "背景图资源清单",
+    "backgrounds": [
+        { "id": "bg_title", "file": "bg_title.png", "description": "标题画面" },
+        { "id": "bg_school_gate", "file": "bg_school_gate.png", "description": "学校门口" },
+        { "id": "bg_corridor", "file": "bg_corridor.png", "description": "走廊" },
+        { "id": "bg_courtyard", "file": "bg_courtyard.png", "description": "庭院" },
+        { "id": "bg_classroom", "file": "bg_classroom.png", "description": "教室" },
+        { "id": "bg_art_room", "file": "bg_art_room.png", "description": "美术室" },
+        { "id": "bg_cafe", "file": "bg_cafe.png", "description": "咖啡厅" },
+        { "id": "bg_date", "file": "bg_date.png", "description": "约会场景" }
+    ],
+    "spec": {
+        "format": "JPG / PNG",
+        "size": "720x1280 px (竖屏)",
+        "style": "与角色立绘风格统一"
+    }
+}
