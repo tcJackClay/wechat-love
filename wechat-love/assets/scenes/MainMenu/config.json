@@ -1,0 +1,109 @@
+{
+    "version": "1.0",
+    "sceneName": "MainMenu",
+    "description": "主菜单场景配置",
+    "canvas": {
+        "designWidth": 720,
+        "designHeight": 1280,
+        "fitWidth": true,
+        "fitHeight": false
+    },
+    "background": {
+        "type": "sprite",
+        "resource": "resources/backgrounds/bg_title",
+        "color": "#1a1a2e"
+    },
+    "menuButtons": [
+        {
+            "id": "btn_new_game",
+            "text": "新游戏",
+            "position": { "x": 0, "y": 100 },
+            "fontSize": 32,
+            "normalColor": "#ffffff",
+            "pressedColor": "#cccccc",
+            "disabledColor": "#666666"
+        },
+        {
+            "id": "btn_continue",
+            "text": "继续游戏",
+            "position": { "x": 0, "y": 20 },
+            "fontSize": 28,
+            "normalColor": "#ffffff"
+        },
+        {
+            "id": "btn_load",
+            "text": "读取存档",
+            "position": { "x": 0, "y": -60 },
+            "fontSize": 28,
+            "normalColor": "#ffffff"
+        },
+        {
+            "id": "btn_settings",
+            "text": "设置",
+            "position": { "x": 0, "y": -140 },
+            "fontSize": 28,
+            "normalColor": "#ffffff"
+        },
+        {
+            "id": "btn_gallery",
+            "text": "画廊",
+            "position": { "x": 0, "y": -220 },
+            "fontSize": 28,
+            "normalColor": "#ffffff"
+        }
+    ],
+    "confirmPanel": {
+        "enabled": true,
+        "backgroundColor": "#000000aa",
+        "dialog": {
+            "width": 500,
+            "height": 250,
+            "backgroundColor": "#2a2a4a",
+            "cornerRadius": 20
+        },
+        "buttons": [
+            {
+                "id": "btn_yes",
+                "text": "确定",
+                "width": 150,
+                "height": 60
+            },
+            {
+                "id": "btn_no",
+                "text": "取消",
+                "width": 150,
+                "height": 60
+            }
+        ]
+    },
+    "animations": {
+        "entrance": {
+            "type": "slide_up",
+            "duration": 0.5,
+            "delayPerButton": 0.1,
+            "easing": "backOut"
+        },
+        "buttonHover": {
+            "scale": 1.1,
+            "duration": 0.1
+        },
+        "buttonClick": {
+            "scale": 0.95,
+            "duration": 0.05
+        }
+    },
+    "audio": {
+        "bgm": "bgm_title",
+        "sfxHover": "button_hover",
+        "sfxClick": "button_click"
+    },
+    "platform": {
+        "wechat": {
+            "share": {
+                "enabled": true,
+                "title": "圣樱学院 - 恋爱养成",
+                "imageUrl": "resources/images/share"
+            }
+        }
+    }
+}
