@@ -1,0 +1,237 @@
+{
+    "version": "1.0",
+    "updateTime": "2026-02-26",
+    "description": "数值系统配置 - 模拟数据，可通过JSON编辑器修改",
+    "gameBalance": {
+        "favor": {
+            "min": 0,
+            "max": 1000,
+            "default": 0,
+            "levelThresholds": [0, 100, 250, 400, 550, 700, 850, 1000],
+            "levelNames": ["陌生人", "认识", "熟人", "朋友", "好友", "亲密", "恋人", "命中注定"],
+            "changeRates": {
+                "gift": {"min": 10, "max": 30},
+                "choice_good": {"min": 3, "max": 10},
+                "choice_bad": {"min": -10, "max": -3},
+                "date_good": {"min": 20, "max": 50},
+                "date_normal": {"min": 5, "max": 15},
+                "event_trigger": {"min": 15, "max": 40}
+            }
+        },
+        "attributes": {
+            "charm": {
+                "name": "魅力",
+                "min": 0,
+                "max": 100,
+                "default": 50,
+                "affects": ["对话选项", "约会触发"]
+            },
+            "intellect": {
+                "name": "智慧",
+                "min": 0,
+                "max": 100,
+                "default": 50,
+                "affects": ["解谜选项", "学习事件"]
+            },
+            "luck": {
+                "name": "运气",
+                "min": 0,
+                "max": 100,
+                "default": 50,
+                "affects": ["随机事件", "稀有掉落"]
+            },
+            "athletics": {
+                "name": "体能",
+                "min": 0,
+                "max": 100,
+                "default": 50,
+                "affects": ["运动事件", "体力上限"]
+            }
+        },
+        "energy": {
+            "max": 100,
+            "default": 100,
+            "dailyRecovery": 20,
+            "actionCost": {
+                "dialog": 2,
+                "choice": 3,
+                "date": 30,
+                "event": 10
+            }
+        }
+    },
+    "items": {
+        "gifts": [
+            {
+                "id": "gift_flower",
+                "name": "鲜花",
+                "type": "gift",
+                "rarity": 1,
+                "price": 50,
+                "favorRange": [5, 15],
+                "description": "一束新鲜的鲜花",
+                "suitableFor": ["heroine_1", "heroine_2"]
+            },
+            {
+                "id": "gift_chocolate",
+                "name": "巧克力",
+                "type": "gift",
+                "rarity": 2,
+                "price": 100,
+                "favorRange": [10, 25],
+                "description": "手工制作的巧克力",
+                "suitableFor": ["heroine_1", "heroine_2", "heroine_3"]
+            },
+            {
+                "id": "gift_book",
+                "name": "书籍",
+                "type": "gift",
+                "rarity": 2,
+                "price": 150,
+                "favorRange": [15, 30],
+                "description": "一本珍贵的书籍",
+                "suitableFor": ["heroine_1", "heroine_3"]
+            },
+            {
+                "id": "gift_game",
+                "name": "游戏盘",
+                "type": "gift",
+                "rarity": 2,
+                "price": 200,
+                "favorRange": [10, 20],
+                "description": "最新发行的游戏",
+                "suitableFor": ["heroine_2"]
+            },
+            {
+                "id": "gift_necklace",
+                "name": "项链",
+                "type": "gift",
+                "rarity": 4,
+                "price": 500,
+                "favorRange": [30, 50],
+                "description": "精致的银项链",
+                "suitableFor": ["heroine_1", "heroine_3"]
+            }
+        ],
+        "keyItems": [
+            {
+                "id": "key_student_id",
+                "name": "学生证",
+                "type": "key",
+                "description": "圣樱学院的学生证"
+            },
+            {
+                "id": "key_library_card",
+                "name": "图书馆卡",
+                "type": "key",
+                "description": "可以进入图书馆的卡片"
+            }
+        ]
+    },
+    "dates": {
+        "cafe": {
+            "id": "date_cafe",
+            "name": "咖啡厅约会",
+            "location": "校内咖啡厅",
+            "cost": 100,
+            "energyCost": 25,
+            "duration": "afternoon",
+            "requiredFavor": 200,
+            "availableDays": ["saturday", "sunday"],
+            "events": [
+                {
+                    "id": "cafe_event_1",
+                    "favorRange": [15, 30],
+                    "conditions": {"charm": 30}
+                },
+                {
+                    "id": "cafe_event_2",
+                    "favorRange": [10, 20],
+                    "conditions": {}
+                }
+            ]
+        },
+        "cinema": {
+            "id": "date_cinema",
+            "name": "电影院",
+            "location": "市中心电影院",
+            "cost": 200,
+            "energyCost": 35,
+            "duration": "evening",
+            "requiredFavor": 400,
+            "availableDays": ["saturday", "sunday"],
+            "events": []
+        },
+        "school_festival": {
+            "id": "date_festival",
+            "name": "学园祭",
+            "location": "校园",
+            "cost": 0,
+            "energyCost": 40,
+            "duration": "all_day",
+            "requiredFavor": 300,
+            "availableDays": ["special"],
+            "events": []
+        }
+    },
+    "achievements": [
+        {
+            "id": "ach_first_meeting",
+            "name": "初次见面",
+            "description": "与第一位角色相遇",
+            "condition": {"type": "flag", "target": "met_yuqing"}
+        },
+        {
+            "id": "ach_friend_zone",
+            "name": "友谊深厚",
+            "description": "与某角色好感度达到好友",
+            "condition": {"type": "favor", "value": 400}
+        },
+        {
+            "id": "ach_true_love",
+            "name": "命中注定",
+            "description": "达成真结局",
+            "condition": {"type": "ending", "value": "good"}
+        },
+        {
+            "id": "ach_play_5h",
+            "name": "沉浸其中",
+            "description": "累计游玩5小时",
+            "condition": {"type": "time", "value": 18000}
+        }
+    ],
+    "rewards": {
+        "daily": {
+            "login": {
+                "day1": {"type": "currency", "amount": 100},
+                "day2": {"type": "currency", "amount": 150},
+                "day3": {"type": "currency", "amount": 200},
+                "day4": {"type": "gift", "id": "gift_chocolate"},
+                "day5": {"type": "currency", "amount": 300},
+                "day6": {"type": "currency", "amount": 350},
+                "day7": {"type": "gift", "id": "gift_flower"}
+            }
+        },
+        "story": {
+            "chapter_complete": {"type": "currency", "amount": 100},
+            "ending_unlock": {"type": "cg", "id": "auto"}
+        }
+    },
+    "difficulty": {
+        "easy": {
+            "favorMultiplier": 1.5,
+            "energyCostMultiplier": 0.8,
+            "description": "简单模式 - 好感度获取更多，行动力消耗更少"
+        },
+        "normal": {
+            "favorMultiplier": 1.0,
+            "energyCostMultiplier": 1.0,
+            "description": "标准模式"
+        },
+        "hard": {
+            "favorMultiplier": 0.7,
+            "energyCostMultiplier": 1.2,
+            "description": "困难模式 - 好感度获取更难"
+        }
+    }
+}

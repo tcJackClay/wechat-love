@@ -1,0 +1,35 @@
+# Cocos Creator
+# built cocos2d-js-linux-x64/
+# built meta files
+library/
+temp/
+assets/External/
+local/
+settings/
+*. CreatorPref*
+*.local*
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+publish/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Zip
+*.zip
+*.rar
