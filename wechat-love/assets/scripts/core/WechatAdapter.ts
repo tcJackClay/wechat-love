@@ -285,8 +285,8 @@ export class WechatAdapter extends EventEmitter {
         });
 
         wx.onHide(() => {
-            console.log('[ onHide');
-           WechatAdapter] this.emit('hide');
+            console.log('[WechatAdapter] onHide');
+            this.emit('hide');
         });
     }
 

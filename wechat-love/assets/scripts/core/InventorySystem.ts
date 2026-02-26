@@ -254,7 +254,7 @@ export class InventorySystem extends EventEmitter {
      */
     hasItem(itemId: string): boolean {
         const item = this._items.get(itemId);
-        return item && item.count > 0;
+        return !!(item && item.count > 0);
     }
 
     /**

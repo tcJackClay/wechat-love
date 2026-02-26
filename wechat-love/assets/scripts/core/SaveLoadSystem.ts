@@ -45,6 +45,10 @@ export interface SaveData {
 
     // 缩略图（base64）
     thumbnail?: string;
+
+    // 设置数据
+    autoSave?: boolean;
+    autoSaveInterval?: number;
 }
 
 // 存档简要信息

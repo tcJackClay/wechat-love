@@ -487,6 +487,13 @@ export class CharacterSystem extends EventEmitter {
      * 重置所有角色数据
      */
     resetAll() {
+        this.reset();
+    }
+
+    /**
+     * 重置（供外部调用）
+     */
+    reset() {
         for (const [, char] of this._characters) {
             char.favor = 0;
             char.unlocked = false;

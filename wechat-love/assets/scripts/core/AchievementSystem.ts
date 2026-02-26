@@ -37,7 +37,7 @@ const ACHIEVEMENT_DEFINITIONS: Array<AchievementData & { condition: AchievementC
         id: 'ach_first_meeting',
         name: '初次见面',
         description: '与第一位角色相遇',
-        condition: { type: 'flag', target: 'met_yuqing', value: true },
+        condition: { type: 'flag', target: 'met_yuqing', value: 1 },
     },
     {
         id: 'ach_new_friends',
@@ -91,7 +91,7 @@ const ACHIEVEMENT_DEFINITIONS: Array<AchievementData & { condition: AchievementC
         id: 'ach_first_gift',
         name: '心意相通',
         description: '第一次赠送礼物',
-        condition: { type: 'flag', target: 'first_gift', value: true },
+        condition: { type: 'flag', target: 'first_gift', value: 1 },
     },
 ];
 
@@ -339,8 +339,8 @@ export class AchievementSystem extends EventEmitter {
                 if (!state?.unlocked) continue;
             }
 
-            const state = this._.id);
-            listachievements.get(def.push({ ...def, ...state! });
+            const state = this._achievements.get(def.id);
+            list.push({ ...def, ...state! });
         }
 
         return list;

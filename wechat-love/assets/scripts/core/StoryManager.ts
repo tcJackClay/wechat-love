@@ -264,7 +264,7 @@ export class StoryManager extends EventEmitter {
                 // 已通过某章节
                 return this._visitedNodes.size > 0;
             case 'flag':
-                return this.getLocalFlag(condition.target);
+                return this.getLocalFlag(condition.target || '');
             default:
                 return true;
         }
