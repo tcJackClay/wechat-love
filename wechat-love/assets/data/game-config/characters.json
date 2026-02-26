@@ -1,0 +1,162 @@
+{
+    "version": "1.0",
+    "updateTime": "2026-02-26",
+    "description": "角色配置文件 - 模拟数据，可通过JSON编辑器修改",
+    "characters": [
+        {
+            "id": " heroine_1",
+            "name": "林雨晴",
+            "title": "学生会会长",
+            "birthday": "5月15日",
+            "constellation": "金牛座",
+            "bloodType": "A",
+            "hobby": ["读书", "钢琴", "咖啡"],
+            "personality": ["温柔", "认真", "偶尔腹黑"],
+            "description": "就读于圣樱学院高中部三年级，学生会会长。外表温柔待人，内心却有着不为人知的一面...",
+            "sprites": {
+                "normal": "char_001_normal",
+                "smile": "char_001_smile",
+                "blush": "char_001_blush",
+                "angry": "char_001_angry",
+                "sad": "char_001_sad",
+                "surprise": "char_001_surprise",
+                "think": "char_001_think",
+                "laugh": "char_001_laugh"
+            },
+            "defaultFavor": 0,
+            "maxFavor": 1000,
+            "unlockCondition": {
+                "type": "chapter",
+                "value": "ch00"
+            },
+            "endings": [
+                {
+                    "id": "ending_good_1",
+                    "name": "最好的会长",
+                    "condition": {
+                        "type": "favor",
+                        "target": "heroine_1",
+                        "value": 800
+                    }
+                },
+                {
+                    "id": "ending_bad_1",
+                    "name": "普通同学",
+                    "condition": {
+                        "type": "favor",
+                        "target": "heroine_1",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "heroine_2",
+            "name": "苏小晚",
+            "title": "元气学妹",
+            "birthday": "11月22日",
+            "constellation": "射手座",
+            "bloodType": "O",
+            "hobby": ["篮球", "游戏", "甜点"],
+            "personality": ["活泼", "外向", "天然呆"],
+            description: "高中部二年级，篮球社成员。总是充满活力，是学院里的开心果...",
+            "sprites": {
+                "normal": "char_002_normal",
+                "smile": "char_002_smile",
+                "blush": "char_002_blush",
+                "angry": "char_002_angry",
+                "sad": "char_002_sad",
+                "surprise": "char_002_surprise",
+                "think": "char_002_think",
+                "laugh": "char_002_laugh"
+            },
+            "defaultFavor": 0,
+            "maxFavor": 1000,
+            "unlockCondition": {
+                "type": "chapter",
+                "value": "ch01"
+            },
+            "endings": [
+                {
+                    "id": "ending_good_2",
+                    "name": "青春恋曲",
+                    "condition": {
+                        "type": "favor",
+                        "target": "heroine_2",
+                        "value": 750
+                    }
+                }
+            ]
+        },
+        {
+            "id": "heroine_3",
+            "name": "沈墨寒",
+            "title": "冰山校花",
+            "birthday": "2月14日",
+            "constellation": "水瓶座",
+            "bloodType": "AB",
+            "hobby": ["绘画", "猫", "独处"],
+            "personality": ["冷漠", "傲娇", "细腻"],
+            "description": "高中部三年级，冷艳高岭之花。看似难以接近，实则内心柔软...",
+            "sprites": {
+                "normal": "char_003_normal",
+                "smile": "char_003_smile",
+                "blush": "char_003_blush",
+                "angry": "char_003_angry",
+                "sad": "char_003_sad",
+                "surprise": "char_003_surprise",
+                "think": "char_003_think",
+                "laugh": "char_003_laugh"
+            },
+            "defaultFavor": 0,
+            "maxFavor": 1000,
+            "unlockCondition": {
+                "type": "chapter",
+                "value": "ch02"
+            },
+            "endings": [
+                {
+                    "id": "ending_good_3",
+                    "name": "融化冰山",
+                    "condition": {
+                        "type": "favor",
+                        "target": "heroine_3",
+                        "value": 850
+                    }
+                }
+            ]
+        }
+    ],
+    "protagonist": {
+        "id": "player",
+        "name": "李明",
+        "defaultName": "李明",
+        "allowRename": true,
+        "attributes": {
+            "charm": {
+                "name": "魅力",
+                "default": 50,
+                "max": 100,
+                "min": 0
+            },
+            "intellect": {
+                "name": "智慧",
+                "default": 50,
+                "max": 100,
+                "min": 0
+            },
+            "luck": {
+                "name": "运气",
+                "default": 50,
+                "max": 100,
+                "min": 0
+            },
+            "athletics": {
+                "name": "体能",
+                "default": 50,
+                "max": 100,
+                "min": 0
+            }
+        }
+    }
+}

@@ -1,0 +1,325 @@
+{
+    "version": "1.0",
+    "updateTime": "2026-02-26",
+    "description": "剧情章节配置 - 模拟数据，可通过JSON编辑器修改",
+    "chapters": [
+        {
+            "id": "ch00",
+            "title": "序章 - 入学第一天",
+            "description": "故事从主角入学圣樱学院开始...",
+            "unlockCondition": null,
+            "bgm": "bgm_chapter_0",
+            "requiredFavor": {},
+            "nodes": {
+                "ch00_start": {
+                    "type": "narration",
+                    "background": "bg_school_gate",
+                    "content": "九月的阳光洒在圣樱学院的校门上，我站在这里，心跳加速...",
+                    "next": "ch00_01"
+                },
+                "ch00_01": {
+                    "type": "dialog",
+                    "speaker": "player",
+                    "content": "这就是圣樱学院吗...真大啊...",
+                    "next": "ch00_02"
+                },
+                "ch00_02": {
+                    "type": "dialog",
+                    "background": "bg_corridor",
+                    "character": {
+                        "id": "heroine_1",
+                        "pose": "smile",
+                        "position": "center"
+                    },
+                    "speaker": "???",
+                    "content": "同学，你是一年级新生吗？",
+                    "next": "ch00_03"
+                },
+                "ch00_03": {
+                    "type": "dialog",
+                    "speaker": "heroine_1",
+                    "content": "我叫林雨晴，是学生会会长。有什么需要帮忙的吗？",
+                    "next": "ch00_04"
+                },
+                "ch00_04": {
+                    "type": "choice",
+                    "content": "如何回应？",
+                    "choices": [
+                        {
+                            "id": "choice_01_a",
+                            "text": "（礼貌）学姐好，我是新生李明，请多指教！",
+                            "next": "ch00_05_a",
+                            "effects": [
+                                {"type": "flag", "target": "polite", "value": true}
+                            ],
+                            "favorChange": {"heroine_1": 5}
+                        },
+                        {
+                            "id": "choice_01_b",
+                            "text": "（冷淡）嗯，我自己能找到教室。",
+                            "next": "ch00_05_b",
+                            "effects": [
+                                {"type": "flag", "target": "cold", "value": true}
+                            ],
+                            "favorChange": {"heroine_1": -2}
+                        },
+                        {
+                            "id": "choice_01_c",
+                            "text": "（搭话）学姐，学生会好玩吗？",
+                            "next": "ch00_05_c",
+                            "favorChange": {"heroine_1": 3}
+                        }
+                    ]
+                },
+                "ch00_05_a": {
+                    "type": "dialog",
+                    "speaker": "heroine_1",
+                    "content": "呵呵，不用这么紧张。走吧，我带你去教室。",
+                    "next": "ch00_06"
+                },
+                "ch00_05_b": {
+                    "type": "dialog",
+                    "speaker": "heroine_1",
+                    "content": "...那好吧，有问题可以来学生会咨询。",
+                    "next": "ch00_06"
+                },
+                "ch00_05_c": {
+                    "type": "dialog",
+                    "speaker": "heroine_1",
+                    "content": "这个嘛...只有亲身加入才知道哦！有兴趣的话欢迎加入学生会~",
+                    "next": "ch00_06"
+                },
+                "ch00_06": {
+                    "type": "narration",
+                    "content": "就这样，我认识了学生会长林雨晴。大学生活，似乎会很有趣...",
+
+                    "effects": [
+                        {"type": "flag", "target": "met_yuqing", "value": true}
+                    ],
+                    "next": "ch00_end"
+                },
+                "ch00_end": {
+                    "type": "end",
+                    "chapter": "ch01"
+                }
+            }
+        },
+        {
+            "id": "ch01",
+            "title": "第一章 - 新的邂逅",
+            "description": "开学第二天，遇到了活泼的学妹...",
+            "unlockCondition": {
+                "type": "chapter",
+                "value": "ch00"
+            },
+            "bgm": "bgm_chapter_1",
+            "requiredFavor": {},
+            "nodes": {
+                "ch01_start": {
+                    "type": "narration",
+                    "background": "bg_courtyard",
+                    "content": "第二天的课间，我正在校园里散步...",
+                    "next": "ch01_01"
+                },
+                "ch01_01": {
+                    "type": "dialog",
+                    "character": {
+                        "id": "heroine_2",
+                        "pose": "surprise",
+                        "position": "right"
+                    },
+                    "speaker": "???",
+                    "content": "小心！！！",
+                    "next": "ch01_02"
+                },
+                "ch01_02": {
+                    "type": "event",
+                    "background": "bg_courtyard",
+                    "content": "一个篮球朝我飞来...",
+                    "next": "ch01_03"
+                },
+                "ch01_03": {
+                    "type": "choice",
+                    "content": "反应选项",
+                    "choices": [
+                        {
+                            "id": "choice_02_a",
+                            "text": "敏捷地接住篮球",
+                            "next": "ch01_04_a",
+                            "effects": [
+                                {"type": "attribute", "target": "athletics", "value": 5}
+                            ]
+                        },
+                        {
+                            "id": "choice_02_b",
+                            "text": "尝试躲避",
+                            "next": "ch01_04_b",
+                            "effects": [
+                                {"type": "attribute", "target": "luck", "value": 3}
+                            ]
+                        }
+                    ]
+                },
+                "ch01_04_a": {
+                    "type": "dialog",
+                    "character": {
+                        "id": "heroine_2",
+                        "pose": "smile",
+                        "position": "center"
+                    },
+                    "speaker": "heroine_2",
+                    "content": "哇！同学你好厉害！我是二年级的苏小晚，篮球社的！",
+                    "next": "ch01_05"
+                },
+                "ch01_04_b": {
+                    "type": "dialog",
+                    "character": {
+                        "id": "heroine_2",
+                        "pose": "laugh",
+                        "position": "center"
+                    },
+                    "speaker": "heroine_2",
+                    "content": "哈哈没事吧！我是苏小晚，二年级！刚才对不起啦~",
+                    "next": "ch01_05"
+                },
+                "ch01_05": {
+                    "type": "dialog",
+                    "speaker": "heroine_2",
+                    "content": "你叫什么名字？以后一起打球吧！",
+                    "next": "ch01_end"
+                },
+                "ch01_end": {
+                    "type": "end",
+                    "chapter": "ch02"
+                }
+            }
+        },
+        {
+            "id": "ch02",
+            "title": "第二章 - 冰山融化",
+            "description": "美术课上，遇到了神秘的转学生...",
+            "unlockCondition": {
+                "type": "chapter",
+                "value": "ch01"
+            },
+            "bgm": "bgm_chapter_2",
+            "requiredFavor": {},
+            "nodes": {
+                "ch02_start": {
+                    "type": "narration",
+                    "background": "bg_art_room",
+                    "content": "美术课上，老师安排了一个临时同桌...",
+                    "next": "ch02_01"
+                },
+                "ch02_01": {
+                    "type": "dialog",
+                    "character": {
+                        "id": "heroine_3",
+                        "pose": "normal",
+                        "position": "center"
+                    },
+                    "speaker": "???",
+                    "content": "......",
+                    "next": "ch02_02"
+                },
+                "ch02_02": {
+                    "type": "dialog",
+                    "speaker": "player",
+                    "content": "同学你好，我是李明...",
+                    "next": "ch02_03"
+                },
+                "ch02_03": {
+                    "type": "dialog",
+                    "speaker": "heroine_3",
+                    "content": "沈墨寒。",
+                    "next": "ch02_04"
+                },
+                "ch02_04": {
+                    "type": "choice",
+                    "content": "如何与沈墨寒交流？",
+                    "choices": [
+                        {
+                            "id": "choice_03_a",
+                            "text": "聊绘画话题",
+                            "next": "ch02_05_a",
+                            "effects": [
+                                {"type": "attribute", "target": "intellect", "value": 3}
+                            ],
+                            "favorChange": {"heroine_3": 5}
+                        },
+                        {
+                            "id": "choice_03_b",
+                            "text": "保持沉默",
+                            "next": "ch02_05_b",
+                            "favorChange": {"heroine_3": 1}
+                        },
+                        {
+                            "id": "choice_03_c",
+                            "text": "询问她为什么这么冷漠",
+                            "next": "ch02_05_c",
+                            "effects": [
+                                {"type": "flag", "target": "ask_about_mo", "value": true}
+                            ],
+                            "favorChange": {"heroine_3": -3}
+                        }
+                    ]
+                },
+                "ch02_05_a": {
+                    "type": "dialog",
+                    "character": {
+                        "id": "heroine_3",
+                        "pose": "surprise",
+                        "position": "center"
+                    },
+                    "speaker": "heroine_3",
+                    "content": "你...也喜欢绘画？",
+                    "next": "ch02_06"
+                },
+                "ch02_05_b": {
+                    "type": "dialog",
+                    "speaker": "heroine_3",
+                    "content": "......",
+                    "next": "ch02_06"
+                },
+                "ch02_05_c": {
+                    "type": "dialog",
+                    "character": {
+                        "id": "heroine_3",
+                        "pose": "angry",
+                        "position": "center"
+                    },
+                    "speaker": "heroine_3",
+                    "content": "与你无关。",
+                    "next": "ch02_06"
+                },
+                "ch02_06": {
+                    "type": "narration",
+                    "content": "沈墨寒...似乎有很多故事的样子...",
+                    "next": "ch02_end"
+                },
+                "ch02_end": {
+                    "type": "end"
+                }
+            }
+        }
+    ],
+    "commonNodes": {
+        "title_screen": {
+            "type": "scene",
+            "background": "bg_title",
+            "bgm": "bgm_title",
+            "next": "main_menu"
+        },
+        "main_menu": {
+            "type": "menu",
+            "buttons": [
+                {"id": "new_game", "text": "新游戏", "next": "ch00_start"},
+                {"id": "continue", "text": "继续游戏", "next": "load_save"},
+                {"id": "load_game", "text": "读取存档", "next": "load_save"},
+                {"id": "settings", "text": "设置", "next": "settings"},
+                {"id": "gallery", "text": "画廊", "next": "gallery"},
+                {"id": "exit", "text": "退出", "next": "exit"}
+            ]
+        }
+    }
+}
