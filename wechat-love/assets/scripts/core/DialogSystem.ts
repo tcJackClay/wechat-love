@@ -4,7 +4,7 @@
  */
 
 import { _decorator, Component, Node, Label, Sprite, RichText, tween, Vec3 } from 'cc';
-import { GameStateMachine, DialogState } from './GameStateMachine';
+import { GameStateMachine, GameState, DialogState } from './GameStateMachine';
 import { EventEmitter } from './EventEmitter';
 
 const { ccclass, property } = _decorator;
